@@ -81,11 +81,6 @@ non_cs_df = pd.DataFrame({
     'Primary_category' : non_cs_primary_categorys
 })
 combined_df = pd.concat([cs_df, non_cs_df])
-combined_df.to_json('arxiv_dataset.json', orient='records', lines=True)
+combined_df['Methods'] = pd.Series(dtype='float64')
+combined_df.to_csv('arxiv_dataset.csv', index=False)
 
-# Combine DataFrames if needed
-# combined_df = pd.concat([cs_df, non_cs_df])
-
-# Save to CSV if needed
-# cs_df.to_csv('cs_articles.csv', index=False)
-# non_cs_df.to_csv('non_cs_articles.csv', index=False)
