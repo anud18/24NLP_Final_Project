@@ -21,8 +21,8 @@ start_date = datetime(2020, 1, 1)
 end_date = datetime(2020, 12, 1)
 one_month = timedelta(days=30)
 
-cs_count = 20
-non_cs_count = 20
+cs_count = 5
+non_cs_count = 5
 
 cs_titles = []
 cs_abstracts = []
